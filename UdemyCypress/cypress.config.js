@@ -6,7 +6,7 @@ module.exports = defineConfig({
   projectId: '5rvgy3',
   reporter: 'mochawesome',
   chromeWebSecurity: true,
-  projectId: "opzq9x",
+  projectId: "3a87dd",
   experimentalSourceRewriting: false,
   e2e: {
     // We've imported your old cypress plugins here.
