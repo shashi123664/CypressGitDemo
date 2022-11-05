@@ -1,0 +1,100 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-11-02T04:08:58.830Z",
+    "end": "2022-11-02T04:10:36.015Z",
+    "duration": 97185,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "968bf508-caa1-453d-82ae-5f33bd314e1a",
+      "title": "",
+      "fullFile": "cypress\\e2e\\2-advanced-examples\\DraftingTheOrder.js",
+      "file": "cypress\\e2e\\2-advanced-examples\\DraftingTheOrder.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "ab6ea113-d7cc-4436-9df6-b77950df6025",
+          "title": "Creating the darft order and verify in draft order queue script",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Creating the darft order and verify in draft order queue test case",
+              "fullTitle": "Creating the darft order and verify in draft order queue script Creating the darft order and verify in draft order queue test case",
+              "timedOut": null,
+              "duration": 91943,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://beta3.canprevcommons.ca');\ncy.get('#email').type('shashi_s@trigent.com');\ncy.get('#password').type('Welcome@123');\ncy.get(':nth-child(5) > .w-full').click();\ncy.contains('Accounts Management').click();\ncy.get('.c-show > .c-sidebar-nav-dropdown-items > :nth-child(1) > .c-sidebar-nav-link').click();\ncy.get('#filterInput').type('test1252b');\ncy.contains('test1252b').click();\ncy.get('#draft-order-dropdown__BV_button_').click();\ncy.get('#order_source').select('Phoned');\ncy.get('.multiselect__placeholder').type('{enter}');\ncy.get('#order-item-qty-0').type('1');\ncy.get('#order-item-sku-0').type('194107').type('{downarrow}{enter}');\ncy.get('.btn-primary.mr-2').click();\ncy.get('#orders-tab').click();\nvar orderNumber = '';\nvar ordernumberInDraftOrder = '';\ncy.get('[class=\"col-md-12 col-lg-8 pr-lg-1\"]').find('[class=\"mb-2\"]').eq(0).then(function (ActualOrderNumber) {\n  orderNumber = ActualOrderNumber.text();\n  cy.log(ActualOrderNumber.text());\n  cy.log(orderNumber);\n}).then(() => {\n  cy.get(':nth-child(3) > .c-sidebar-nav-dropdown-toggle').click();\n  cy.contains('Complete').click();\n  cy.get('#order-queue-dropdownMenuButton').click();\n  cy.get('.border-0 > :nth-child(3) > .d-flex > :nth-child(1) > .mb-1').click();\n  cy.get('[class=\"col-md-12 col-lg-8 pr-lg-1\"]').find('[class=\"mb-2\"]').each(($el, index, $list) => {\n    if ($el.text().includes(orderNumber)) {\n      ordernumberInDraftOrder = orderNumber;\n      cy.log(orderNumber);\n      cy.log(ordernumberInDraftOrder);\n    }\n  });\n}).then(() => {\n  expect(ordernumberInDraftOrder).to.equals(orderNumber);\n});",
+              "err": {},
+              "uuid": "49d3e4c2-c8be-4ddf-8752-9edf91d7ff45",
+              "parentUUID": "ab6ea113-d7cc-4436-9df6-b77950df6025",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "49d3e4c2-c8be-4ddf-8752-9edf91d7ff45"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 91943,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.2.0"
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+    "url": "https://uat3.canprevcommons.ca/",
+    "email": "sharath_d@trigent.com",
+    "password": "Welcome@123",
+    "dashboardUrl": "https://uat3.canprevcommons.ca/dashboard",
+    "accountRequestUrl":"https://uat3.canprevcommons.ca/accounts/request",
+    "name": "automation",
+    "mainContactName": "test",
+    "phone": "1234567890",
+    "accountEmail": "shashishoumya12@outlook.com",
+    "LocationName": "test",
+    "LocationType": "Office'",
+    "Address": "12 York Street, Toronto, ON, Canada",
+    "LocationPhoneNumber": "9370828901",
+    "contactName": "Test Contact'",
+    "contactType": "General",
+    "contactLocation": "test",
+    "accountType": "Employee",
+    "accountUrl": "https://uat3.canprevcommons.ca/accounts/detail"
+
+}
