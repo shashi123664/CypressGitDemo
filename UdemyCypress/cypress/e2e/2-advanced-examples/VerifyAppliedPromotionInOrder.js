@@ -18,8 +18,9 @@ it('Verify applied promotion in order test case', function(){
     cy.get('#order-item-sku-0').type('194246').type('{downarrow}{enter}')
     cy.get('[rownumber="0"] > :nth-child(5) > .form-control').select('Test 07 Sept - 20%').should('have.value','493')
 
-     cy.log('First automation is done')
-     cy.log('Second automation is done')
+    cy.log('Test')
+    cy.log('Test')
+    cy.log('Test')
 })
 
 
