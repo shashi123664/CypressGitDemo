@@ -23,7 +23,7 @@ describe('Creation of reminder script', function(){
                    cy.log(reminderTitle)
         })
   
-      
+      cy.log('Reminder is created')
     })
   
   
