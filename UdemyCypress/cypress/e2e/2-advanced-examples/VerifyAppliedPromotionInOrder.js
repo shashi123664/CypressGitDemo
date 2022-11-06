@@ -21,9 +21,7 @@ it('Verify applied promotion in order test case', function(){
     cy.log('Test')
     cy.log('Test')
     cy.log('Test')
-    cy.log('Test')
-    cy.log('Test')
-    cy.log('Test')
+    
 })
 
 
