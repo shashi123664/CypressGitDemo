@@ -3,8 +3,10 @@ const { defineConfig } = require('cypress')
 module.exports = defineConfig({
   defaultCommandTimeout: 36000,
   pageLoadTimeout: 120000,
+  projectId: '5rvgy3',
   reporter: 'mochawesome',
   chromeWebSecurity: true,
+  projectId: "3a87dd",
   experimentalSourceRewriting: false,
   e2e: {
     // We've imported your old cypress plugins here.
